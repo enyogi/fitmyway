@@ -1,24 +1,31 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
-import { ActivityPage } from '../pages/activity/detail/activity';
 import { ActivitychoosePage } from '../pages/activity/chooser/activitychoose';
+import { UserComponent } from '../components/user/user.component';
 
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class MyApp implements OnInit {
+  ngOnInit(): void {
+    this.user.LoadUser();
+  }
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen,
+    private user: UserComponent) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -30,10 +37,6 @@ export class MyApp {
         { 
           title: 'History', 
           component: HistoryPage 
-        },
-        { 
-          title: 'Activity', 
-          component: ActivityPage 
         },
         { 
           title: 'Activity Chooser', 

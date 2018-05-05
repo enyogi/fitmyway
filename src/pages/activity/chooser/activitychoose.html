@@ -1,19 +1,28 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>activitychoose</ion-title>
-  </ion-navbar>
-
-</ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Choose An Activity</ion-title>
+    </ion-navbar>
+  </ion-header>
 
 
 <ion-content padding>
-What do you want to do today?<br><br>
-Physical Therapy Plan Prescribed by<br>
-Dr Jay Patel<br><br>
-Custom Activity Plan<br><br>
-Calories Burned Last week:<br>
-415<br><br>
-Points earned: 82
+    What do you want to do today?
+    <ion-list>
+      <ion-item (click)="drPlanClick($event)">
+            Physical Therapy Plan Prescribed by<br>
+            Dr Jay Patel
+      </ion-item>
+      <ion-item (click)="customPlanClick($event)">
+          Custom Activity Plan<br><br>
+      </ion-item>
+    </ion-list>
+  <br><br>
+    Calories Burned Last week:<br>
+    415<br><br>
+    Points earned: 82
 
-</ion-content>
+    {{ user.Name }}
+  </ion-content>

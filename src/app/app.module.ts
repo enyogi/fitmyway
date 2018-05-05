@@ -9,6 +9,7 @@ import { HistoryPage } from '../pages/history/history';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ActivityPageModule } from '../pages/activity/activity.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ActivityPageModule } from '../pages/activity/activity.module';
   imports: [
     BrowserModule,
     ActivityPageModule,
+    ComponentsModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

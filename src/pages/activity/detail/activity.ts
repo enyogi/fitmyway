@@ -13,8 +13,10 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'activity.html',
 })
 export class ActivityPage {
-
+  type: number;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.type = this.navParams.get('type');
   }
 
   ionViewDidLoad() {
