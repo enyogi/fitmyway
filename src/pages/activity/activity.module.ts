@@ -10,6 +10,7 @@ import { ActivitychoosePage } from './chooser/activitychoose';
   ],
   imports: [
     IonicPageModule.forChild(ActivityPage),
+    IonicPageModule.forChild(ActivitychoosePage),
   ],
 })
 export class ActivityPageModule {}

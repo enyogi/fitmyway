@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
 import { ActivityPage } from '../pages/activity/detail/activity';
+import { ActivitychoosePage } from '../pages/activity/chooser/activitychoose';
 
 @Component({
   templateUrl: 'app.html'
@@ -33,6 +34,10 @@ export class MyApp {
         { 
           title: 'Activity', 
           component: ActivityPage 
+        },
+        { 
+          title: 'Activity Chooser', 
+          component: ActivitychoosePage 
         },
     ];
 
