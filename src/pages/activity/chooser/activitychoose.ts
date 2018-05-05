@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NavController, NavParams } from 'ionic-angular';
-import { ActivityPage } from '../detail/activity';
+import { ActivityPage } from '../slider/activity';
 import { UserComponent } from '../../../components/user/user.component';
 import { User } from '../../../components/user/user';
 

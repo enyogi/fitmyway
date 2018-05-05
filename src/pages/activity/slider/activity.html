@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Fit My Way</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div>
+        <div style="width: 20%; display: inline-block">
+          <i class="fa fa-angle-double-left"></i> Easier
+      </div>
+      <div style="display:inline-block; width:55%">
+          <ion-slides (ionSlideDidChange)="slideChanged()">
+              <ion-slide *ngFor="let activity of activities">
+                  <div style="border: 1px solid black; display: inline-block" (click)="selectActivity(activity)">
+                      <div>
+                          {{ activity.Name }}
+                      </div>
+                      <div>
+                        Difficulty: {{ activity.Difficulty }}
+                      </div>
+                  </div>
+              </ion-slide>
+          </ion-slides>
+      </div>
+      <div style="width: 20%; display: inline-block">
+          Harder <i class="fa fa-angle-double-right"></i>
+      </div>
+    </div>
+    <div style="border-top: 1px solid gray; padding: 5px">
+        <div>
+                {{ currentSlide.Name }}
+        </div>
+    </div>
+  </ion-content>
