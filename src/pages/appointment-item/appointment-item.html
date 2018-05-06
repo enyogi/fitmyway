@@ -9,6 +9,6 @@
         </div>
     </div>
     <div style="text-align: center" *ngIf="canSubmit=='true'">
-            <button (click)="sendData()" ion-button round color="Dark">Send Activity</button>            
+            <button (click)="sendData()" [disabled]="hasSubmitted" ion-button round color="Dark">Send Activity</button>            
     </div>
 </div>

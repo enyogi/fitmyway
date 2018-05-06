@@ -35,9 +35,9 @@ export class ActivityPage implements OnInit {
       this.activities = response;
       //this.activities = response; 
       setTimeout(() => {
-        this.slides.initialSlide = 30;
+        //this.slides.initialSlide = 30;
         this.currentSlide = this.activities[this.slides.initialSlide];
-        this.currentSlide.IsPrescribed = true;
+        //this.currentSlide.IsPrescribed = true;
         this.slides.slideTo(this.slides.initialSlide, 0)
         this.showSlide = true;
         }, 300);

@@ -12,12 +12,15 @@ export class AppointmentItemPage {
 @Input() name: string;
 @Input() canSubmit: string;
 
+hasSubmitted = false;
+
     constructor(public navCtrl: NavController, public navParams: NavParams, private endpointApi: EndpointapiComponent) {
     
     }
     
-    sendData() {
+    sendData() { 
         this.endpointApi.PublishActivity(1).subscribe(() => {
+            this.hasSubmitted = true;
 
         });
     }

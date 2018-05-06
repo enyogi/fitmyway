@@ -47,13 +47,12 @@
     </div>
     <div>
         <div *ngIf="currentSlide" style="border-top: 1px solid gray; padding: 5px;">
-                <div>
-                    <div>Description:</div>
+                <div style="font-size: 24px; text-align: center">
                     <div>{{ currentSlide.Description }}</div>
                 </div>
             </div>
     </div>
-    <div style="text-align: center">
-            <button (click)="startActivity()" ion-button round color="Dark">Start</button>
+    <div *ngIf="currentSlide" style="text-align: center; margin-top:100px;">
+            <div (click)="startActivity()"><img src="assets/imgs/button.png"></div>
     </div>
  </ion-content>
