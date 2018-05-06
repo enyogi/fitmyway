@@ -37,21 +37,21 @@ export class ActivityPage implements OnInit {
       setTimeout(() => {
         this.slides.initialSlide = 30;
         this.currentSlide = this.activities[this.slides.initialSlide];
+        this.currentSlide.IsPrescribed = true;
         this.slides.slideTo(this.slides.initialSlide, 0)
         this.showSlide = true;
         }, 300);
     });
   }
-  
+  startActivity() {
+    this.navCtrl.push(ActivityDetailPage, {activtyId: this.currentSlide.ActivityId});
+  }
   slideChanged() {
     this.currentSlide = this.activities[this.slides.getActiveIndex()];
     console.log('slide changed');
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActivityPage');
-  }
-  selectActivity(activity: Activity) {
-    this.navCtrl.push(ActivityDetailPage, {activtyId: activity.ActivityId});
   }
 
 }

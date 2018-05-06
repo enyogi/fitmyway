@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
 import { ActivitychoosePage } from '../pages/activity/chooser/activitychoose';
 import { UserComponent } from '../components/user/user.component';
+import { ActivityPage } from '../pages/activity/slider/activity';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +18,7 @@ export class MyApp implements OnInit {
   }
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = ActivityPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -30,18 +31,14 @@ export class MyApp implements OnInit {
 
     // used for an example of ngFor and navigation
     this.pages = [
-        { 
-          title: 'Home',
-          component: HomePage 
-        },
-        { 
-          title: 'History', 
-          component: HistoryPage 
-        },
-        { 
-          title: 'Activity Chooser', 
-          component: ActivitychoosePage 
-        },
+      { 
+        title: 'Choose Activity',
+        component: ActivityPage 
+      },
+      { 
+        title: 'Profile', 
+        component: HomePage 
+      },
     ];
 
   }

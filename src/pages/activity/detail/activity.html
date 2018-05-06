@@ -1,1 +1,16 @@
-this is the page
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>Fit My Way</ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      <ion-content padding style="background-color: #6Fdcff">
+          <div style="font-size: 70px">
+              {{ minutes }} : {{ pad(seconds, 2) }}
+          </div>
+
+          <button (click)="startActivity()" ion-button round color="Dark">GO</button>
+      </ion-content>

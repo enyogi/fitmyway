@@ -21,29 +21,39 @@
         <ion-slides (ionSlideDidChange)="slideChanged()">
               <ion-slide *ngFor="let activity of activities">
                   <div style="border: 1px solid lightgray; display: inline-block; 
-                  border-radius: 10%; padding: 20px; background-color: white; height: 300px; width:300px;" 
-                  (click)="selectActivity(activity)" [hidden]="!showSlide">
+                    border-radius: 10%; padding: 20px; background-color: white; height: 230px; width:230px;" 
+                    (click)="selectActivity(activity)" [hidden]="!showSlide">
                       <div>
                           {{ activity.Name }}
                       </div>
                       <div style="height:200px">
 
                       </div>
-                      <div>
-                        Prescribed by: 
-                      </div>
-                  </div>
+                </div>
               </ion-slide>
           </ion-slides>
+          <div *ngIf="currrentSlide" [hidden]="!currentSlide.IsPrescribed">
+                <div>
+                        Prescribed by: 
+                </div>
+                <div>
+                    {{ _user.Doctor}} 
+                </div>
+        </div>
       </div>
       <div style="width: 10%; display: inline-block; font-size:50px;text-align:right; ">
           <i class="fa fa-angle-right"></i>
       </div>
     </div>
-    <div *ngIf="currentSlide" style="border-top: 1px solid gray; padding: 5px;">
-        <div>
-            <div>Description:</div>
-            <div>{{ currentSlide.Description }}</div>
-        </div>
+    <div>
+        <div *ngIf="currentSlide" style="border-top: 1px solid gray; padding: 5px;">
+                <div>
+                    <div>Description:</div>
+                    <div>{{ currentSlide.Description }}</div>
+                </div>
+            </div>
     </div>
-  </ion-content>
+    <div style="text-align: center">
+            <button (click)="startActivity()" ion-button round color="Dark">Start</button>
+    </div>
+ </ion-content>

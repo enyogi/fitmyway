@@ -7,5 +7,6 @@ export class Activity {
     ImageUrl: string;
     IntensityLevel: number;
     Points: Number;
+    IsPrescribed: boolean;
   }
   

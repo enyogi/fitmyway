@@ -15,6 +15,7 @@ export class EndpointapiComponent {
     const user = new User();
     user.Name = "Loren Koss";
     user.Id = 1;
+    user.Doctor = "Dr. Jay Patel";
     return user;
   }
 
