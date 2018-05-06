@@ -13,13 +13,15 @@ import { ComponentsModule } from '../components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfilePage } from '../pages/profile/profile';
 import { DoctorPage } from '../pages/doctor/doctor';
+import { DoctorItemPage } from '../pages/doctor-item/doctor-item.component';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ProfilePage,
-    DoctorPage
+    DoctorPage,
+    DoctorItemPage
   ],
   imports: [
     BrowserModule,

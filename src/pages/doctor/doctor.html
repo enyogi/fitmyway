@@ -6,3 +6,11 @@
           <ion-title>Fit My Way</ion-title>
         </ion-navbar>
 </ion-header>
+
+<ion-content padding style="background-color: #6Fdcff">
+<ion-list>
+  <ion-item><doctor-item [id]="'3'" [isDoctor]="'true'" [firstName]="'Jay'" [lastName]="'Patel'" [title]="'Primary Care Physician'"></doctor-item></ion-item>
+  <ion-item><doctor-item [id]="'2'" [isDoctor]="'false'" [firstName]="'Loren'" [lastName]="'Koss'" [title]="'Physical Therapist'"></doctor-item></ion-item>
+  <ion-item><doctor-item [id]="'1'" [isDoctor]="'false'" [firstName]="'Sharon'" [lastName]="'Yang'" [title]="'Physical Therapist'"></doctor-item></ion-item>
+</ion-list>
+</ion-content>

@@ -1,0 +1,18 @@
+<div style="border-bottom: 1px solid black">
+    <div style="display: inline-block; height:40px;width:40px">
+        <img src="assets/imgs/doctor{{ id }}.jpg">
+    </div>
+    <div style="display: inline-block; height: 40px">
+        <div>
+            <span *ngIf="isDoctor=='true'">Dr. </span>{{ firstName }} {{ lastName }}
+        </div>
+        <div>
+            {{ title }}
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+            Last Visit: 3/15/2018
+    </div>
+</div>
