@@ -2,12 +2,6 @@ import { Injectable } from '@angular/core';
 import { EndpointapiComponent } from '../endpointapi/endpointapi';
 import { User } from './user';
 
-/**
- * Generated class for the UserComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 @Injectable()
 export class UserComponent {
 

@@ -40,14 +40,20 @@ export class ActivityDetailPage implements OnInit {
     endActivity() {
         clearInterval(this.timerId);
         let currentIndex = this.navCtrl.getActive().index;
-        this.navCtrl.push(ActivityFinishPage).then(() => {
-            this.navCtrl.remove(currentIndex);
-            this.endpointApi.StopActivity(1, 1);
-            this.hasStarted = false;
+        this.endpointApi.StopActivity(1, 1).subscribe(() => {
+            this.navCtrl.push(ActivityFinishPage).then(() => {
+                this.navCtrl.remove(currentIndex);
+                this.endpointApi.StopActivity(1, 1);
+                this.hasStarted = false;
+            });
         });
     }
     startActivity() {
         this._startTime = new Date();
+        this.endpointApi.StartActivity(1, 1).subscribe(() => {
+
+        });
+
         //this._finishTime.setTime(this._startTime.getTime() + ((60 * 1000) * 5));
         this.endpointApi.StartActivity(1, 1);
         this.hasStarted = true;

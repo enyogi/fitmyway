@@ -24,14 +24,19 @@ export class EndpointapiComponent {
     return this.httpClient.get(this.apiHost+"api/user/"+userId+"/activity");
 
   }
+  PublishActivity(userId: number) {
+    return this.httpClient.post(this.apiHost+"api/athena/publish/user/"+userId,
+        {
+        });
+  }
 
   StartActivity(userId: number, activityId: number) {
-    this.httpClient.post(this.apiHost+"/api/user/"+userId+"/activty/"+activityId+"/start",
+    return this.httpClient.post(this.apiHost+"api/fitbit/user/"+userId+"/activity/"+activityId+"/start",
         {
         });
   }
   StopActivity(userId: number, activityId: number) {
-    this.httpClient.post(this.apiHost+"/api/user/"+userId+"/activty/"+activityId+"/stop",
+    return this.httpClient.post(this.apiHost+"api/fitbit/user/"+userId+"/activity/"+activityId+"/end",
         {
         });
   }
