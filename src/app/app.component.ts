@@ -7,6 +7,7 @@ import { UserComponent } from '../components/user/user.component';
 import { ActivityPage } from '../pages/activity/slider/activity';
 import { ProfilePage } from '../pages/profile/profile';
 import { DoctorPage } from '../pages/doctor/doctor';
+import { AppointmentsPage } from '../pages/appointments/appointment';
 
 @Component({
   templateUrl: 'app.html'
@@ -37,6 +38,10 @@ export class MyApp implements OnInit {
       { 
         title: 'Profile', 
         component: ProfilePage 
+      },
+      { 
+        title: 'My Appointments', 
+        component: AppointmentsPage 
       },
       { 
         title: 'My Doctors', 

@@ -8,9 +8,6 @@ import { EndpointapiComponent } from '../../../components/endpointapi/endpointap
 })
 export class ActivityFinishPage implements OnInit  {
     ngOnInit(): void {
-        this.endpointApi.PublishActivity(1).subscribe(() => {
-
-        });
     }
     constructor(      
         public navCtrl: NavController, 

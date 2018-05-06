@@ -17,6 +17,9 @@ import { DoctorItemPage } from '../pages/doctor-item/doctor-item.component';
 import { ProgressBarComponent } from '../pages/progress/progress.component';
 import { ActivityProgressPage } from '../pages/activity/progress/progress.component';
 import { FriendsPage } from '../pages/friends/friends.component';
+import { FriendItemPage } from '../pages/friend-item/friend-item.component';
+import { AppointmentsPage } from '../pages/appointments/appointment';
+import { AppointmentItemPage } from '../pages/appointment-item/appointment-item.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { FriendsPage } from '../pages/friends/friends.component';
     DoctorItemPage,
     ProgressBarComponent,
     ActivityProgressPage,
-    FriendsPage
+    FriendsPage,
+    FriendItemPage,
+    AppointmentsPage,
+    AppointmentItemPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,8 @@ import { FriendsPage } from '../pages/friends/friends.component';
     ProfilePage,
     DoctorPage,
     ActivityProgressPage,
-    FriendsPage
+    FriendsPage,
+    AppointmentsPage
   ],
   providers: [
     StatusBar,

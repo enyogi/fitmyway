@@ -1,0 +1,30 @@
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>Fit My Way</ion-title>
+        </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #6Fdcff">
+    <div>
+            <div style="font-weight: bold; font-size: 14px">
+                Upcoming Appointments
+            </div>
+            <div *ngFor="let appointment of appointments">
+                <appointment-item [appointment]="appointment" [canSubmit]="'true'" [name]="'Dr Koss'"></appointment-item>
+            </div>
+    </div>
+    <div>
+            <div style="font-weight: bold; font-size: 14px">
+                    Past Appointments
+            </div>
+            <div style="padding-bottom: 5px">
+                    <appointment-item [appointment]="appointment1" [canSubmit]="'false'" [name]="'Dr Patel'"></appointment-item>        
+            </div>
+            <div>
+                    <appointment-item [appointment]="appointment2" [canSubmit]="'false'" [name]="'Dr Yang'"></appointment-item>        
+            </div>
+        </div>
+</ion-content>

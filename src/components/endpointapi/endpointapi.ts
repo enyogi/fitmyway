@@ -29,7 +29,9 @@ export class EndpointapiComponent {
         {
         });
   }
-
+  LoadAppointments(userId: number) {
+    return this.httpClient.get(this.apiHost+"api/athena/appointments/user/"+userId);
+  }
   StartActivity(userId: number, activityId: number) {
     return this.httpClient.post(this.apiHost+"api/fitbit/user/"+userId+"/activity/"+activityId+"/start",
         {
