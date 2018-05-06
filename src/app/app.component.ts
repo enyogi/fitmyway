@@ -3,11 +3,10 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { HistoryPage } from '../pages/history/history';
-import { ActivitychoosePage } from '../pages/activity/chooser/activitychoose';
 import { UserComponent } from '../components/user/user.component';
 import { ActivityPage } from '../pages/activity/slider/activity';
+import { ProfilePage } from '../pages/profile/profile';
+import { DoctorPage } from '../pages/doctor/doctor';
 
 @Component({
   templateUrl: 'app.html'
@@ -37,7 +36,11 @@ export class MyApp implements OnInit {
       },
       { 
         title: 'Profile', 
-        component: HomePage 
+        component: ProfilePage 
+      },
+      { 
+        title: 'My Doctors', 
+        component: DoctorPage 
       },
     ];
 

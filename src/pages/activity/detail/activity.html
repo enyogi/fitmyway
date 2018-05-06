@@ -8,9 +8,13 @@
       </ion-header>
       
       <ion-content padding style="background-color: #6Fdcff">
-          <div style="font-size: 70px">
-              {{ minutes }} : {{ pad(seconds, 2) }}
-          </div>
-
-          <button (click)="startActivity()" ion-button round color="Dark">GO</button>
+          
+        <div style="text-align: center">
+                <div style="font-size: 140px">
+                        {{ minutes }} : {{ pad(seconds, 2) }}
+                    </div>
+          
+                    <button (click)="startActivity()" [disabled]="hasStarted" ion-button round color="Dark">GO</button>
+                    <button (click)="endActivity()" [disabled]="!hasStarted" ion-button round color="Dark">Stop</button>
+                  </div>
       </ion-content>

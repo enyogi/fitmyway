@@ -4,7 +4,7 @@ export class Activity {
     Calories: Number;
     Name: string;
     Description: string;
-    ImageUrl: string;
+    ImageURL: string;
     IntensityLevel: number;
     Points: Number;
     IsPrescribed: boolean;

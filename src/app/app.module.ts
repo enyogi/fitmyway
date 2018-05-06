@@ -11,12 +11,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ActivityPageModule } from '../pages/activity/activity.module';
 import { ComponentsModule } from '../components/components.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfilePage } from '../pages/profile/profile';
+import { DoctorPage } from '../pages/doctor/doctor';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    HistoryPage
+    ProfilePage,
+    DoctorPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
   entryComponents: [
     MyApp,
     HomePage,
-    HistoryPage,
+    ProfilePage,
+    DoctorPage
   ],
   providers: [
     StatusBar,

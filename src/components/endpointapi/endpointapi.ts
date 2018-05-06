@@ -24,4 +24,15 @@ export class EndpointapiComponent {
     return this.httpClient.get(this.apiHost+"api/user/"+userId+"/activity");
 
   }
+
+  StartActivity(userId: number, activityId: number) {
+    this.httpClient.post(this.apiHost+"/api/user/"+userId+"/activty/"+activityId+"/start",
+        {
+        });
+  }
+  StopActivity(userId: number, activityId: number) {
+    this.httpClient.post(this.apiHost+"/api/user/"+userId+"/activty/"+activityId+"/stop",
+        {
+        });
+  }
 }
