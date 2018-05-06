@@ -47,6 +47,9 @@ export class ActivityPage implements OnInit {
     this.navCtrl.push(ActivityDetailPage, {activtyId: this.currentSlide.ActivityId});
   }
   slideChanged() {
+    if (this.slides.getActiveIndex()==this.activities.length) {
+      return;
+    }
     this.currentSlide = this.activities[this.slides.getActiveIndex()];
     console.log('slide changed');
   }
