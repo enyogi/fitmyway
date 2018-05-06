@@ -15,7 +15,7 @@ export class ActivityPage implements OnInit {
   _user: User;
   activities: Activity[];
   currentSlide: Activity;
-
+  showSlide: boolean;
   type: number;
   
   @ViewChild(Slides) slides: Slides;
@@ -30,19 +30,28 @@ export class ActivityPage implements OnInit {
 
   ngOnInit(): void {
     this._user = this.user.CurrentUser();
-    this.activities = this.endpointApi.LoadActivities(this._user.Id);
-    this.slides.initialSlide = 1;
-    this.currentSlide = this.activities[1];
+    this.showSlide = false;
+    this.endpointApi.LoadActivities(this._user.Id).subscribe((response: Activity[]) => {
+      this.activities = response;
+      //this.activities = response; 
+      setTimeout(() => {
+        this.slides.initialSlide = 30;
+        this.currentSlide = this.activities[this.slides.initialSlide];
+        this.slides.slideTo(this.slides.initialSlide, 0)
+        this.showSlide = true;
+        }, 300);
+    });
   }
   
   slideChanged() {
     this.currentSlide = this.activities[this.slides.getActiveIndex()];
+    console.log('slide changed');
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActivityPage');
   }
   selectActivity(activity: Activity) {
-    this.navCtrl.push(ActivityDetailPage, {activtyId: activity.Id});
+    this.navCtrl.push(ActivityDetailPage, {activtyId: activity.ActivityId});
   }
 
 }

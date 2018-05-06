@@ -7,32 +7,43 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <div>
-        <div style="width: 20%; display: inline-block">
-          <i class="fa fa-angle-double-left"></i> Easier
+<ion-content padding style="background-color: #6Fdcff">
+    <div *ngIf="currentSlide" style="text-align: center;">
+            <div>
+                Intensity: {{ currentSlide.IntensityLevel }}
+            </div>
+    </div>
+    <div style="height:320px">
+        <div style="width: 10%; display: inline-block; font-size:50px; ">
+          <i class="fa fa-angle-left"></i>
       </div>
-      <div style="display:inline-block; width:55%">
-          <ion-slides (ionSlideDidChange)="slideChanged()">
+      <div style="display:inline-block; width:75%; vertical-align: middle" >
+        <ion-slides (ionSlideDidChange)="slideChanged()">
               <ion-slide *ngFor="let activity of activities">
-                  <div style="border: 1px solid black; display: inline-block" (click)="selectActivity(activity)">
+                  <div style="border: 1px solid lightgray; display: inline-block; 
+                  border-radius: 10%; padding: 20px; background-color: white; height: 300px; width:300px;" 
+                  (click)="selectActivity(activity)" [hidden]="!showSlide">
                       <div>
                           {{ activity.Name }}
                       </div>
+                      <div style="height:200px">
+
+                      </div>
                       <div>
-                        Difficulty: {{ activity.Difficulty }}
+                        Prescribed by: 
                       </div>
                   </div>
               </ion-slide>
           </ion-slides>
       </div>
-      <div style="width: 20%; display: inline-block">
-          Harder <i class="fa fa-angle-double-right"></i>
+      <div style="width: 10%; display: inline-block; font-size:50px;text-align:right; ">
+          <i class="fa fa-angle-right"></i>
       </div>
     </div>
-    <div style="border-top: 1px solid gray; padding: 5px">
+    <div *ngIf="currentSlide" style="border-top: 1px solid gray; padding: 5px;">
         <div>
-                {{ currentSlide.Name }}
+            <div>Description:</div>
+            <div>{{ currentSlide.Description }}</div>
         </div>
     </div>
   </ion-content>

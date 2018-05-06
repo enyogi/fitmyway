@@ -1,8 +1,11 @@
 export class Activity {
-    Id: Number;
+    ActivityId: Number;
+    ActivityTypeId: Number;
+    Calories: Number;
     Name: string;
     Description: string;
     ImageUrl: string;
-    Difficulty: number;
+    IntensityLevel: number;
+    Points: Number;
   }
   
