@@ -14,6 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfilePage } from '../pages/profile/profile';
 import { DoctorPage } from '../pages/doctor/doctor';
 import { DoctorItemPage } from '../pages/doctor-item/doctor-item.component';
+import { ProgressBarComponent } from '../pages/progress/progress.component';
+import { ActivityProgressPage } from '../pages/activity/progress/progress.component';
+import { FriendsPage } from '../pages/friends/friends.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { DoctorItemPage } from '../pages/doctor-item/doctor-item.component';
     HomePage,
     ProfilePage,
     DoctorPage,
-    DoctorItemPage
+    DoctorItemPage,
+    ProgressBarComponent,
+    ActivityProgressPage,
+    FriendsPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import { DoctorItemPage } from '../pages/doctor-item/doctor-item.component';
     MyApp,
     HomePage,
     ProfilePage,
-    DoctorPage
+    DoctorPage,
+    ActivityProgressPage,
+    FriendsPage
   ],
   providers: [
     StatusBar,

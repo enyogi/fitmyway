@@ -26,5 +26,12 @@
 <div style="padding-top:10px; font-size: 26px; text-align: center">
   Exercises Completed: {{ activities[btnSelected] }}
 </div>
+<div>
+    <progress-bar [progress]="loadProgress" (click)="clickProgress()"></progress-bar>
+</div>
+<div style="font-size: 25px; padding-top: 20px; padding-bottom: 10px" (click)="clickFriends()">
+    <div style="display: inline-block; width:48%; padding-left: 10px;">Friends</div>
+    <div style="display: inline-block; width:48%; text-align: right; font-weight: bold">3&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></div>
+</div>
 </ion-content>
       
